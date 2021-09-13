@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+{{> headers/header-main }}
+<body>
+{{> navigation }}
+{{#if error}}
+    <br/>
+    <h4>{{error.msg}}</h4>
+    <br/>
+{{/if}}
+{{{body}}}
+{{> footers/footer-main }}
+</body>
+{{>js-main}}
+{{>js-popovers-tooltips}}
+</html>
