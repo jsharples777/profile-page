@@ -18,4 +18,4 @@ SO THAT I can review samples of their work and assess whether they're a good can
 ```
 
 ## Screenshot
-![screenshot](./public/img/screenshot.png)
+![screenshot](backend/public/img/screenshot.png)
