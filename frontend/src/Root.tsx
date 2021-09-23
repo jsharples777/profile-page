@@ -28,7 +28,7 @@ class Root extends React.Component {
         return (
             <React.Fragment>
                 <Navigation/>
-                <div className="container-fluid">
+                <div className="container-fluid pt-4">
                     <HashRouter>
                     <Switch>
                         <Redirect exact from="/" to="/aboutme"/>

@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Navigation(props: any) {
 
-    const { hash } = window.location;
+    let { hash } = window.location;
+    if (!hash) {
+        hash = '#/aboutme';
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <a className="navbar-brand" href="/">

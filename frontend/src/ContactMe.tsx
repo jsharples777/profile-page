@@ -9,8 +9,7 @@ export default function ContactMe(props: any) {
         }
         else {
             event.target.classList.remove('is-invalid');
-            event.target.parentElement.querySelector(".invalid-feedback")?.removeAttribute("style");
-
+            event.target.parentElement.querySelector(".invalid-feedback")?.removeAttribute("style");    ``
         }
 
     }
@@ -23,7 +22,7 @@ export default function ContactMe(props: any) {
                             <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>
                             <div className="col-sm-10">
                                 <input type="text" className="form-control" id="inputName" placeholder="Name" required onBlur={blurHandler}/>
-                                <div className="invalid-feedback d-none">Name is needed.</div>
+                                <div className="invalid-feedback">Name is needed.</div>
                             </div>
                         </div>
                         <div className="form-group row">

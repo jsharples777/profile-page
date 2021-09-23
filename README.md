@@ -7,6 +7,7 @@ I want to provide an [updated profile](https://week-09-homework.herokuapp.com/) 
 Node.js with Express to deliver the content
 Handlebars as a template engine to allow ease of use and maintenance
 Bootstrap 4 for responsive styling an layout
+React with React Router for content creation on the client
 ```
 
 ## User Story
