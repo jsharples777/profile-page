@@ -11,8 +11,16 @@ export default function ContactMe(props: any) {
             event.target.classList.remove('is-invalid');
             event.target.parentElement.querySelector(".invalid-feedback")?.removeAttribute("style");    ``
         }
+    }
+
+    const clickHandler = (event:any) => {
+        alert("Thank you for your contact");
+        document.getElementById("inputName").value = '';
+        document.getElementById("inputEmail").value = '';
+        document.getElementById("inputMessage").value = '';
 
     }
+
     return (
         <React.Fragment>
             <div className="row pb-4 mb-4">
@@ -43,7 +51,7 @@ export default function ContactMe(props: any) {
                         <div className="form-group row">
                             <div className="col-sm-10">
                                 <button type="submit" className="btn btn-primary">Send <i
-                                    className="fas fa-paper-plane"></i></button>
+                                    className="fas fa-paper-plane" onClick={clickHandler}></i></button>
                             </div>
                         </div>
                     </form>
