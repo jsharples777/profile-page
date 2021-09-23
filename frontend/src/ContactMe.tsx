@@ -4,8 +4,15 @@ export default function ContactMe(props: any) {
 
     const blurHandler = (event:any) => {
         if (event.target.value.trim().length === 0) {
-            alert("Nope");
+            event.target.classList.add('is-invalid');
+            event.target.parentElement.querySelector(".invalid-feedback")?.addAttribute("style","display:block");
         }
+        else {
+            event.target.classList.remove('is-invalid');
+            event.target.parentElement.querySelector(".invalid-feedback")?.removeAttribute("style");
+
+        }
+
     }
     return (
         <React.Fragment>
@@ -16,24 +23,28 @@ export default function ContactMe(props: any) {
                             <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>
                             <div className="col-sm-10">
                                 <input type="text" className="form-control" id="inputName" placeholder="Name" required onBlur={blurHandler}/>
+                                <div className="invalid-feedback d-none">Name is needed.</div>
                             </div>
                         </div>
                         <div className="form-group row">
                             <label htmlFor="inputEmail" className="col-sm-2 col-form-label">Email</label>
                             <div className="col-sm-10">
-                                <input type="email" className="form-control" id="inputEmail" placeholder="Email" required/>
+                                <input type="email" className="form-control" id="inputEmail" placeholder="Email" required onBlur={blurHandler}/>
+                                <div className="invalid-feedback">Email address is needed.</div>
                             </div>
                         </div>
                         <div className="form-group row">
                             <label htmlFor="inputMessage" className="col-sm-2 col-form-label">Message</label>
                             <div className="col-sm-10">
                                 <textarea rows={5} cols={20} className="form-control" id="inputMessage"
-                                          placeholder="Message" required/>
+                                          placeholder="Message" required onBlur={blurHandler}/>
+                                <div className="invalid-feedback">Message needed</div>
                             </div>
                         </div>
                         <div className="form-group row">
                             <div className="col-sm-10">
-                                <button type="submit" className="btn btn-primary">Sign in</button>
+                                <button type="submit" className="btn btn-primary">Send <i
+                                    className="fas fa-paper-plane"></i></button>
                             </div>
                         </div>
                     </form>
