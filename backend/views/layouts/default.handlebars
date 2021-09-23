@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
-{{> headers/header-main }}
+{{> header-main }}
 <body>
-{{> navigation }}
 {{#if error}}
     <br/>
     <h4>{{error.msg}}</h4>
     <br/>
 {{/if}}
 {{{body}}}
-{{> footers/footer-main }}
 <div id="root"></div>
 </body>
-{{>js-main}}
-{{>js-popovers-tooltips}}
+{{> js-main}}
 </html>
