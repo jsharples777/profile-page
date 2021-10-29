@@ -15,12 +15,13 @@ export function Portfolio(props: any) {
                                 <img className="card-img" src="/img/patient-management-system.jpg"
                                      alt="Patient Management System"/>
                                 <div className="card-img-overlay text-white d-flex flex-column justify-content-center">
-                                    <div className="bg-dark p-2 w-50">
-                                        <h4 className="card-title">Patient Management System</h4>
-                                        <h6 className="card-subtitle mb-2">Full Stack MERN</h6>
-                                        <p className="card-text text-warning">Work in progress <i
-                                            className="fas fa-exclamation-triangle"></i></p>
-                                    </div>
+                                    <a className="text-decoration-none"
+                                       href="https://pbs-jps.herokuapp.com/">
+                                        <div className="bg-dark p-2 w-75">
+                                            <h4 className="card-title">Patient Management System</h4>
+                                            <h6 className="card-subtitle mb-2">Full Stack MERN</h6>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

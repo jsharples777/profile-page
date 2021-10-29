@@ -5,6 +5,10 @@
     white-space: nowrap;
 }
 
+my-bg-dark {
+    background-color: #102263 !important;
+}
+
 
 @media (max-width: 768px) {
     .truncate {
